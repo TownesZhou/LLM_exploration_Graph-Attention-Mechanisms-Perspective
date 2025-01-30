@@ -382,6 +382,8 @@ def pre_data(args):
                                       batch_size=args.batch_size, shuffle=False,num_workers=args.num_workers)    
     if args.dataset in ['roman_empire','amazon_ratings','questions']:
         file_path = f'./{args.dataset}/{args.dataset}_right.npz'
+        if args.dataset=='amazon_ratings':
+            file_path = f'./{args.dataset}/{args.dataset}_right_10.npz'
         data = np.load(file_path)
         
         # 切分索引
