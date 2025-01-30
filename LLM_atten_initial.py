@@ -828,20 +828,20 @@ def main():
 
     seed_value = 42
     
-    # set_random_seed(seed_value)
-    # trainer=Trainer(args)
-    # if args.train==True:
-    #     trainer.train()
+    set_random_seed(seed_value)
+    trainer=Trainer(args)
+    if args.train==True:
+        trainer.train()
         
     # set_random_seed(seed_value)
     # trainer=Trainer(args)
     # if args.test==True:   
     #     trainer.test()
     
-    set_random_seed(seed_value)
-    trainer=Trainer(args)
-    if args.test==True:   
-        trainer.test_perturbation()
+    # set_random_seed(seed_value)
+    # trainer=Trainer(args)
+    # if args.test==True:   
+    #     trainer.test_perturbation()
 
 if __name__=='__main__':
     main()
