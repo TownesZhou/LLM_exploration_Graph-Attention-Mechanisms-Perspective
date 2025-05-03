@@ -1,4 +1,8 @@
-# Project Documentation
+# Attention Mechanisms Perspective: Exploring LLM Processing of Graph-Structured Data
+
+[attention_score_matrix.pdf](https://github.com/user-attachments/files/20024403/attention_score_matrix.pdf)
+
+
 
 ## 0. Python Environment Setup with Conda
 ```bash
