@@ -1,6 +1,6 @@
 # Attention Mechanisms Perspective: Exploring LLM Processing of Graph-Structured Data
 
-![注意力得分矩阵](./attention_score_matrix.png)
+![注意力得分矩阵](attention_score_matrix.png)
 
 
 ## 0. Python Environment Setup with Conda
