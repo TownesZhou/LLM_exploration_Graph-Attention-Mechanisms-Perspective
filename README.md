@@ -3,6 +3,7 @@
 ![alt text](image.png)
 
 
+[![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/pdf/2505.02130) 
 
 
 
