@@ -5,6 +5,18 @@
 
 [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/pdf/2505.02130) 
 
+```
+@article{guan2025attention,
+  title={Attention Mechanisms Perspective: Exploring LLM Processing of Graph-Structured Data},
+  author={Guan, Zhong and Wu, Likang and Zhao, Hongke and He, Ming and Fan, Jianpin},
+  journal={arXiv preprint arXiv:2505.02130},
+  year={2025}
+}
+
+
+```
+
+
 
 
 ## 0. Python Environment Setup with Conda
