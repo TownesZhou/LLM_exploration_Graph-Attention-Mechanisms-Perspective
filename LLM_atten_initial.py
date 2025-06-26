@@ -12,7 +12,8 @@ import scipy
 from torch_geometric.data import Data
 from torch_sparse import SparseTensor
 from tqdm import tqdm
-from transformers import AutoModelForCausalLM, LlamaTokenizer, AdamW, get_linear_schedule_with_warmup,AutoTokenizer
+from transformers import AutoModelForCausalLM, LlamaTokenizer, get_linear_schedule_with_warmup, AutoTokenizer
+
 from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training, LoraModel, PeftConfig, PeftModel
 import os
 import pickle
@@ -23,9 +24,10 @@ import random
 import torch.nn as nn
 import torch.nn.functional as F
 from torch import einsum
-from transformers.optimization import AdamW, get_linear_schedule_with_warmup
+from transformers.optimization import get_linear_schedule_with_warmup
+from torch.optim import AdamW
 import pickle
-from proj import FP
+# from proj import FP
 import random
 
 def get_total_grad_norm(parameters):
@@ -280,7 +282,7 @@ def get_args():
     parser.add_argument('--device', default='cuda:0')
     
     """LLM Config"""
-    parser.add_argument('--backbone', type=str, default='./llama2-7b-hf')
+    parser.add_argument('--backbone', type=str, default='meta-llama/Llama-2-7b-hf')
     parser.add_argument('--tokenizer', type=str, default='AutoTokenizer')
     parser.add_argument('--max_text_length', type=int, default=4096)
     parser.add_argument('--lora_r', type=int, default=64)
@@ -734,7 +736,7 @@ class Trainer():
                     pbar.update(1)
         pbar.close()
             
-        torch.save(self.model.state_dict(),"llmcom_{}_end_{}.pth".format(self.args.epoch,self.args.dataset))
+        torch.save(self.model.state_dict(),"output/llmcom_{}_end_{}.pth".format(self.args.epoch,self.args.dataset))
                                          
     def test(self):
         for epoch in range(1):
